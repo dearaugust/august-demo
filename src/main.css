@@ -1,0 +1,97 @@
+body{
+  font-size: 16px;
+}
+.my-wrap{
+  display: flex;
+  height:100vh;
+  flex-direction: column;
+}
+header,footer{
+  height:80px;
+  background-color: #8BC34A;
+  flex-shrink: 0;
+  /*当空间不足时，都将等比例缩小 默认值为1 改为0 则不缩小*/
+  display: flex;
+}
+header{
+  justify-content: space-between;
+  /*定义了项目在主轴上的对齐方式*/
+  padding: 0 10px;
+  align-items: center;
+  /*定义项目在交叉轴上如何对齐*/
+  font-size: 20px;
+  color:white;
+}
+footer{
+  align-items: center;
+  text-align: center;
+}
+footer a{
+  flex-basis: 25%;
+  font-size: 18px;
+  color:white;
+  border-right: 1px solid white;
+}
+footer a:hover{
+  color:#F44336;
+  text-decoration: none;
+}
+footer a:active{
+  text-decoration: none;
+}
+footer a:focus{
+  text-decoration: none;
+}
+footer a:last-child{
+  border-right: none;
+}
+.main{
+  flex-grow: 1;
+  /*项目的放大比例,等分剩余空间*/
+  overflow-y: auto;
+  display: flex;
+}
+.main>div{
+  flex-grow: 1;
+}
+.home-wrap{
+  display: flex;
+  align-items:center;
+  background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495020654597&di=f0618936e359b5ea138ebdab54d0ff03&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01c0cf570b3f1f32f8751b3f810914.jpg') no-repeat center;
+  background-size: 100%;
+}
+.home-wrap>div{
+  margin: 0 auto;
+  text-align: center;
+  color:white;
+}
+.example {
+  text-align: center;
+  padding: 30px 50px;
+}
+#post pre{
+  overflow: auto;
+}
+@media (min-width:700px){
+  .my-wrap{
+    flex-direction: row;
+  }
+}
+.left-nav{
+  width: 200px;
+  background-color: #8BC34A;
+}
+.left-nav h1{
+  border-bottom: 2px solid #fff;
+  margin: 20px 2px;
+  text-align: center;
+  color:white;
+}
+.left-nav a{
+  width: 200px;
+  text-align: center;
+  color:white;
+}
+.left-nav a:focus{
+  text-decoration: none;
+}
